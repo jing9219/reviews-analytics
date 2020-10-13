@@ -35,3 +35,11 @@ for d in data:
 		new.append(d)
 print('一共有', len(new), '比留言字數小餘100')
 print(new[0])
+
+# add 篩選指定字樣留言
+good = []
+for d in data:
+	if 'good' in d:
+		good.append(d)
+print('一共有', len(good), '筆留言中有提到good')
+print(good[0])
