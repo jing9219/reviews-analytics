@@ -43,3 +43,7 @@ for d in data:
 		good.append(d)
 print('一共有', len(good), '筆留言中有提到good')
 print(good[0])
+
+# list comprehension 清單快寫法
+good = [d for d in data if 'good' in d]
+print('一共有', len(good), '筆留言中有提到good')
