@@ -7,7 +7,22 @@ with open('reviews.txt', 'r') as f:
 		if count % 1000 == 0:
 			print(len(data))
 
-print(len(data))
-print(data[0])
-print('-------------------')
-print(data[1])
+print('檔案讀取完了,總共有 ', len(data), '筆資料')
+
+# my version
+num = 0
+i = 0
+while True:
+	num = num + len(data[i])
+	i += 1
+	if i >= len(data):
+		break
+num = num / len(data)
+print('留言平均長度為', num)
+
+# teacher's version
+sum_len = 0
+for d in data:
+	sum_len += len(d)
+
+print('留言平均長度為', sum_len / len(data))
